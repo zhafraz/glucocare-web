@@ -7,6 +7,9 @@
     <title>Website Glucocare</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; script-src 'self' 'sha256-ZswfTY7H35rbv8WC7NXBoiC7WNu86vSzCDChNWwZZDM=';">
+
 
     <!-- Favicons -->
     <link href="assets/img/logo_glucocare.jpg" rel="icon">
@@ -43,8 +46,12 @@
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="Glucocare.25@gmail.com">Glucocare.25@gmail.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+62 81218121721</span></i>
+<i class="bi bi-envelope d-flex align-items-center">
+  <a href="mailto:glucocare.25@gmail.com">glucocare.25@gmail.com</a>
+</i>
+<i class="bi bi-phone d-flex align-items-center ms-4">
+  <a href="https://wa.me/6281218121721" target="_blank">+62 81218121721</a>
+</i>
         </div>
         <!-- <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -283,7 +290,7 @@
                 <p>This study concludes that GLUCOCARE is a herbal diabetes medication in capsule form, made from rose and hibiscus flowers and spirulina, with capsule shells derived from seaweed. It can be used to control blood sugar levels in patients with diabetes.</p>
               </div>
 
-              <div class="stats-row">
+              <!-- <div class="stats-row">
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
                   <div class="stat-number">
                     <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>+
@@ -304,7 +311,9 @@
                   </div>
                   <div class="stat-label">Projects Completed</div>
                 </div>
-              </div><!-- End Stats Row -->
+              </div> -->
+              
+              <!-- End Stats Row -->
 
               
             </div>
@@ -1350,58 +1359,53 @@
             <div class="contact-form-container">
               <div class="form-intro">
                 <h2>Let's Start a Conversation</h2>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+                <p>If you have any questions, suggestions, or would like to collaborate, feel free to reach out to us via email. Our team will be happy to respond to your message as soon as possible.</p>
               </div>
 
-              <form action="forms/contact.php" method="post" class="php-email-form contact-form">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-field">
-                      <input type="text" name="name" class="form-input" id="userName" placeholder="Your Name" required="">
-                      <label for="userName" class="field-label">Name</label>
-                    </div>
-                  </div>
+             <form action="mailto:glucocare.25@gmail.com" method="post" enctype="text/plain" class="contact-form">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-field">
+        <input type="text" name="name" class="form-input" id="userName" placeholder="Your Name" required="">
+        <label for="userName" class="field-label">Name</label>
+      </div>
+    </div>
 
-                  <div class="col-md-6">
-                    <div class="form-field">
-                      <input type="email" class="form-input" name="email" id="userEmail" placeholder="Your Email" required="">
-                      <label for="userEmail" class="field-label">Email</label>
-                    </div>
-                  </div>
-                </div>
+    <div class="col-md-6">
+      <div class="form-field">
+        <input type="email" class="form-input" name="email" id="userEmail" placeholder="Your Email" required="">
+        <label for="userEmail" class="field-label">Email</label>
+      </div>
+    </div>
+  </div>
 
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-field">
-                      <input type="tel" class="form-input" name="phone" id="userPhone" placeholder="Your Phone">
-                      <label for="userPhone" class="field-label">Phone</label>
-                    </div>
-                  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-field">
+        <input type="tel" class="form-input" name="phone" id="userPhone" placeholder="Your Phone">
+        <label for="userPhone" class="field-label">Phone</label>
+      </div>
+    </div>
 
-                  <div class="col-md-6">
-                    <div class="form-field">
-                      <input type="text" class="form-input" name="subject" id="messageSubject" placeholder="Subject" required="">
-                      <label for="messageSubject" class="field-label">Subject</label>
-                    </div>
-                  </div>
-                </div>
+    <div class="col-md-6">
+      <div class="form-field">
+        <input type="text" class="form-input" name="subject" id="messageSubject" placeholder="Subject" required="">
+        <label for="messageSubject" class="field-label">Subject</label>
+      </div>
+    </div>
+  </div>
 
-                <div class="form-field message-field">
-                  <textarea class="form-input message-input" name="message" id="userMessage" rows="5" placeholder="Tell us about your project" required=""></textarea>
-                  <label for="userMessage" class="field-label">Message</label>
-                </div>
+  <div class="form-field message-field">
+    <textarea class="form-input message-input" name="message" id="userMessage" rows="5" placeholder="Tell us about your project" required=""></textarea>
+    <label for="userMessage" class="field-label">Message</label>
+  </div>
 
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
+  <button type="submit" class="send-button">
+    Send Message
+    <span class="button-arrow">→</span>
+  </button>
+</form>
 
-                <button type="submit" class="send-button">
-                  Send Message
-                  <span class="button-arrow">→</span>
-                </button>
-              </form>
             </div>
           </div>
 
@@ -1409,7 +1413,7 @@
             <div class="contact-sidebar">
               <div class="contact-header">
                 <h3>Get in Touch</h3>
-                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.</p>
+                <p>You can also get in touch with us directly through our office address, WhatsApp number, or official email. We are always open for discussions, consultations, and the support you may need.</p>
               </div>
 
               <div class="contact-methods">
@@ -1429,7 +1433,7 @@
                   </div>
                   <div class="contact-details">
                     <span class="method-label">Email</span>
-                    <p>Glucocare.25@gmail.com</p>
+                    <p>glucocare.25@gmail.com</p>
                   </div>
                 </div>
 
@@ -1508,7 +1512,7 @@
             <p>Kota Surakarta</p>
             <p>Jawa Tengah, Indonesia</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+62 81218121721</span></p>
-            <p><strong>Email:</strong> <span>Glucocare.25@gmail.com</span></p>
+            <p><strong>Email:</strong> <span>glucocare.25@gmail.com</span></p>
           </div>
         </div>
 

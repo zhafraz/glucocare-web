@@ -874,8 +874,16 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero .hero-content .content h1 {
-    font-size: 2.5rem;
+  .hero .hero-content .content .cta-group {
+    flex-direction: column;
+    align-items: center; /* semua tombol ke tengah */
+    gap: 1rem; /* lebih rapat biar rapi */
+  }
+
+  .hero .hero-content .content .cta-group .btn-primary {
+    width: 100%;
+    max-width: 250px; /* biar ga full, tapi tetap proporsional */
+    text-align: center;
   }
 }
 
